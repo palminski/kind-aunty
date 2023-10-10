@@ -4,14 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { XyzComponent } from './xyz/xyz.component';
-import { AbcComponent } from './abc/abc.component';
-import { DevelopmentHelpComponent } from './development-help/development-help.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { ForParentsComponent } from './for-parents/for-parents.component';
-import { ForTeachersComponent } from './for-teachers/for-teachers.component';
+import { XyzComponent } from './development-components/xyz/xyz.component';
+import { AbcComponent } from './development-components/abc/abc.component';
+import { DevelopmentHelpComponent } from './development-components/development-help/development-help.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ForParentsComponent } from './pages/for-parents/for-parents.component';
+import { ForTeachersComponent } from './pages/for-teachers/for-teachers.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ForTeachersComponent } from './for-teachers/for-teachers.component';
     AboutComponent,
     ContactComponent,
     ForParentsComponent,
-    ForTeachersComponent
+    ForTeachersComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

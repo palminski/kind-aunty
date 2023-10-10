@@ -1,0 +1,94 @@
+nav{
+    background-color: rgb(109, 109, 109);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+/* bar 1 */
+li {
+    padding: 10px 12px 10px 12px;
+    display: flex;
+    align-items: flex-end; 
+    transition-duration: 0.5s;
+}
+
+li a {
+    color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    
+    
+}
+.hoverable:hover{
+    
+    text-shadow: 3px 3px 3px black;
+}
+
+.title a{
+    font-size: xx-large;
+    padding-right: 25px;
+    padding-left: 10px;
+}
+
+
+.title:hover {
+    background-color: rgb(109, 109, 109);
+}
+
+
+
+.active {
+    
+    text-shadow: 3px 3px 3px black;
+}
+
+
+
+/* Bar 2 */
+
+.title-2 a{
+    text-decoration: none;
+    font-weight: normal;
+    font-size: xx-large;
+    color: aliceblue;
+    vertical-align: middle;
+}
+
+.title-2{
+    padding: 10px 0 10px 10px;
+    margin: 0;
+}
+
+.list-2 {
+    background-color: rgb(54, 54, 54);
+}
+
+.item-2{
+    color: aliceblue;
+}
+
+.item-2:hover {
+    cursor: pointer;
+    background-color: rgb(109, 109, 109);
+}
+.active-link {
+    background-color: rgb(109, 109, 109);
+}
+
+/* Bar 3 */
+.list-3 {
+    justify-content: space-between;
+}
+
+.tabs-3 {
+    display: flex;
+    align-items: stretch;
+}

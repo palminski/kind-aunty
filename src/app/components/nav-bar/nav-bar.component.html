@@ -1,12 +1,44 @@
-<h1>Cristianne Lane</h1>
-  
-  <nav>
-    <h3>Navigation Links</h3>
-    <ul>
-      <li><a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a></li>
-      <li><a routerLink="/for-parents" routerLinkActive="active" ariaCurrentWhenActive="page">For Parents</a></li>
-      <li><a routerLink="/for-teachers" routerLinkActive="active" ariaCurrentWhenActive="page">For Teachers</a></li>
-    </ul>
-  </nav>
+<!-- Option 1 -->
+<p>option 1</p>
+<nav>
+  <ul>
+    <li class="title"><a routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" ariaCurrentWhenActive="page">Cristianne Lane</a></li>
+    <li><a class="hoverable" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a></li>
+    <li><a class="hoverable" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a></li>
+    <li><a class="hoverable" routerLink="/for-parents" routerLinkActive="active" ariaCurrentWhenActive="page">For Parents</a></li>
+    <li><a class="hoverable" routerLink="/for-teachers" routerLinkActive="active" ariaCurrentWhenActive="page">For Teachers</a></li>
+  </ul>
+</nav>
+<br>
+
+<!-- Option 2 -->
+<p>option 2</p>
+<nav>
+  <h1 class="title-2"><a routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" ariaCurrentWhenActive="page">Cristianne Lane</a></h1>
+  <ul class="list-2">
+    <li class="item-2" routerLink="/about" routerLinkActive="active-link" ariaCurrentWhenActive="page">About</li>
+    <li class="item-2" routerLink="/contact" routerLinkActive="active-link" ariaCurrentWhenActive="page">Contact</li>
+    <li class="item-2" routerLink="/for-parents" routerLinkActive="active-link" ariaCurrentWhenActive="page">For Parents</li>
+    <li class="item-2" routerLink="/for-teachers" routerLinkActive="active-link" ariaCurrentWhenActive="page">For Teachers</li>
+  </ul>
+</nav>
+<br>
+
+<!-- Option 3 -->
+<p>option 3</p>
+<nav>
+  <ul class="list-3">
+    <div>
+      <li class="title"><a routerLink="/">Cristianne Lane</a>
+      </li>
+    </div>
+    <div class="tabs-3">
+      <li><a class="hoverable" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page" >About</a></li>
+      <li><a class="hoverable" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" >Contact</a></li>
+      <li><a class="hoverable" routerLink="/for-parents" routerLinkActive="active" ariaCurrentWhenActive="page" >For Parents</a></li>
+      <li><a class="hoverable" routerLink="/for-teachers" routerLinkActive="active" ariaCurrentWhenActive="page" >For Teachers</a></li>
+    </div>
+  </ul>
+</nav>
+
+<br>

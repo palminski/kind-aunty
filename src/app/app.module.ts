@@ -14,6 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ForParentsComponent } from './pages/for-parents/for-parents.component';
 import { ForTeachersComponent } from './pages/for-teachers/for-teachers.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     ContactComponent,
     ForParentsComponent,
     ForTeachersComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,16 @@
-<h1>Contact</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="container block">
+    <h1>Contact</h1>
+    <hr>
+    <p>Please Press the button below to test function in the contact component. Do note that this is not the finalised version of the page, it is just used to test how input will be handled so we can use it to send emails later!</p>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()" >
+        <input id="input-test-1" placeholder="input test 1" [(ngModel)]="model.test1" name="test1" (ngModelChange)="onFormChanged()">
+        
+        <input id="input-test-2" placeholder="input test 2" [(ngModel)]="model.test2" name="test2" (ngModelChange)="onFormChanged()">
+        <button>Submit</button>
+        
+    </form>
+    <h1 *ngIf="isSubmitted">Form was Submited with values: [{{submittedMessage.test1}}] [{{submittedMessage.test2}}]</h1>
+    <hr>
+    Data from form will display here in json format for tesing
+    <br> {{model | json}}
+</div>

@@ -1,6 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    
+    /* Solid Colors for backgrounds*/
+    --bg-navigation: rgb(0, 68, 28);
+    --bg-block:rgb(3, 114, 49);
+    /* Solid Colors for text */
+    --text-light: rgb(251, 255, 196);
+    /* Gradients */
+    --gradient: linear-gradient(0deg, var(--bg-navigation), var(--bg-block));
+
+}
+
 body {
     background-color: rgb(199, 199, 199);
     padding: 0;
     margin: 0;
+}
+
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+}
+
+.container-2 {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0% 1%;
+}
+
+.block {
+    background-color: var(--bg-block);
+    background-image: var(--gradient);
+    filter: drop-shadow(0px 3px 6px black);
+    color: var(--text-light);
+    border-radius: 20px;
+    padding: 10px;
 }

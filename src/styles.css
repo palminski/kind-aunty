@@ -26,6 +26,7 @@ body {
 }
 #mainBody{
     flex: 1;
+    padding-bottom: 20px;
 }
 
 
@@ -47,6 +48,13 @@ body {
     background-image: var(--gradient);
     filter: drop-shadow(0px 3px 6px black);
     color: var(--text-light);
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 10px;
+}
+
+/* Utility */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }

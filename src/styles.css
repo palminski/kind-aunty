@@ -2,8 +2,8 @@
 :root {
     
     /* Solid Colors for backgrounds*/
-    --bg-navigation: rgb(0, 68, 28);
-    --bg-block:rgb(3, 114, 49);
+    --bg-navigation: #2281b4;
+    --bg-block:#2281b4;
     /* Solid Colors for text */
     --text-light: rgb(251, 255, 196);
     /* Gradients */
@@ -13,7 +13,7 @@
 
 
 body {
-    background-color: rgb(110, 84, 69);
+    background-color: rgb(139, 115, 100);
     padding: 0;
     margin: 0; 
 }
@@ -26,6 +26,7 @@ body {
 }
 #mainBody{
     flex: 1;
+    padding-bottom: 20px;
 }
 
 
@@ -47,6 +48,13 @@ body {
     background-image: var(--gradient);
     filter: drop-shadow(0px 3px 6px black);
     color: var(--text-light);
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 10px;
+}
+
+/* Utility */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }

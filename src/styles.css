@@ -34,7 +34,8 @@ body {
 .container {
     max-width: 1100px;
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
+    
 }
 
 .container-2 {
@@ -50,6 +51,14 @@ body {
     color: var(--text-light);
     border-radius: 2px;
     padding: 10px;
+    
+}
+
+.invis-block {
+    color: var(--text-light);
+    border-radius: 2px;
+    padding: 10px;
+    
 }
 
 /* Utility */
@@ -57,4 +66,44 @@ body {
     content: "";
     display: table;
     clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.grow-in {
+    animation: grow-in;
+    animation-duration: 0.5s;
+}
+
+.animate-from-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+
+.animate-from-right {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.is-visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@keyframes grow-in {
+    0% {
+        transform: scale(0.9);
+        transform: rotate(-5);
+        opacity: 0%;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 100%;
+        transform: rotate(0);
+    }
 }

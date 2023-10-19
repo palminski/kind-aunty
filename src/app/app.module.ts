@@ -16,6 +16,8 @@ import { ForTeachersComponent } from './pages/for-teachers/for-teachers.componen
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { ScrollAnimationDirective } from './directives/scroll-animation/scroll-animation.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ForParentsComponent,
     ForTeachersComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    ScrollAnimationDirective
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 :root {
     
     /* Solid Colors for backgrounds*/
     --bg-navigation: #2281b4;
-    --bg-block:#2281b4;
+    --bg-primary:#2281b4;
+    --bg-secondary:#1a6086;
     /* Solid Colors for text */
     --text-light: rgb(251, 255, 196);
     /* Gradients */
-    --gradient: linear-gradient(0deg, var(--bg-navigation), var(--bg-block));
+    --gradient: linear-gradient(0deg, var(--bg-primary), var(--bg-primary));
 
 }
 
 
 body {
     background-color: rgb(139, 115, 100);
+    background-image: url('assets/test-background.png');
+    background-size: 500px;
     padding: 0;
     margin: 0; 
 }
@@ -26,14 +31,17 @@ body {
 }
 #mainBody{
     flex: 1;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
-
+.page{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
 
 .container {
-    max-width: 1100px;
-    width: 90%;
+    max-width: 1300px;
+    width: 95%;
     margin: 20px auto;
     
 }
@@ -45,19 +53,19 @@ body {
 }
 
 .block {
-    background-color: var(--bg-block);
+    background-color: var(--bg-primary);
     background-image: var(--gradient);
     filter: drop-shadow(0px 3px 6px black);
     color: var(--text-light);
-    border-radius: 2px;
+    border-radius: 30px;
     padding: 10px;
     
 }
 
 .invis-block {
     color: var(--text-light);
-    border-radius: 2px;
-    padding: 10px;
+    
+    
     
 }
 
@@ -77,12 +85,13 @@ body {
     animation-duration: 0.5s;
 }
 
+/* Animation Classes */
+
 .animate-from-left {
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.5s, opacity 0.5s;
 }
-
 
 .animate-from-right {
     transform: translateX(100%);
@@ -90,8 +99,15 @@ body {
     transition: transform 0.5s, opacity 0.5s;
 }
 
+.animate-from-transparent {
+    
+    opacity: 0.1;
+    transition: opacity 0.5s;
+}
+
 .is-visible {
     transform: translateX(0);
+    
     opacity: 1;
 }
 

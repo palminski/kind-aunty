@@ -17,12 +17,12 @@ export class ScrollAnimationDirective implements AfterViewInit {
   }
 
   evaluateVisability(): void {
-    const isInViewport = this.isElementInViewport(this.el.nativeElement);
-    isInViewport ? console.log("hello world") : console.log('false');
-    if (isInViewport) {
+    
+    
+    if (this.isElementInViewport(this.el.nativeElement)) {
       this.renderer.addClass(this.el.nativeElement,'is-visible');
     }
-    else {
+    else if (this.isElementOffBottom(this.el.nativeElement)){
       this.renderer.removeClass(this.el.nativeElement,'is-visible');
     }
   }
@@ -35,5 +35,10 @@ export class ScrollAnimationDirective implements AfterViewInit {
       rect.bottom >= 0 &&
       rect.right >= 0
     )
+  }
+
+  isElementOffBottom(element: any): boolean {
+    const rect = element.getBoundingClientRect();
+    return rect.top > (window.innerHeight || document.documentElement.clientHeight);
   }
 }

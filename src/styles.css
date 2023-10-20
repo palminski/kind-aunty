@@ -49,15 +49,15 @@ body {
     background-image: var(--gradient);
     filter: drop-shadow(0px 3px 6px black);
     color: var(--text-light);
-    border-radius: 2px;
+    border-radius: 30px;
     padding: 10px;
     
 }
 
 .invis-block {
     color: var(--text-light);
-    border-radius: 2px;
-    padding: 10px;
+    
+    
     
 }
 
@@ -77,12 +77,13 @@ body {
     animation-duration: 0.5s;
 }
 
+/* Animation Classes */
+
 .animate-from-left {
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.5s, opacity 0.5s;
 }
-
 
 .animate-from-right {
     transform: translateX(100%);
@@ -90,8 +91,15 @@ body {
     transition: transform 0.5s, opacity 0.5s;
 }
 
+.animate-from-transparent {
+    
+    opacity: 0.1;
+    transition: opacity 0.5s;
+}
+
 .is-visible {
     transform: translateX(0);
+    
     opacity: 1;
 }
 

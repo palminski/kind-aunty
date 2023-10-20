@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 :root {
     
     /* Solid Colors for backgrounds*/
@@ -29,10 +31,13 @@ body {
 }
 #mainBody{
     flex: 1;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
-
+.page{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
 
 .container {
     max-width: 1300px;

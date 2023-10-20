@@ -33,8 +33,6 @@
         <div class="invis-block animate-from-transparent" appScrollAnimation>
             <ul>
                 <h1 class="list-header animate-from-transparent" appScrollAnimation>Degrees</h1>
-
-
                 <li *ngFor="let listItem of degrees" class="animate-from-transparent" appScrollAnimation>
                     <span class="bold">{{listItem.header}}</span>
                     <div *ngIf="listItem.description">
@@ -45,5 +43,4 @@
             </ul>
         </div>
     </div>
-    
 </div>

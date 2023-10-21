@@ -14,34 +14,43 @@ ul {
     overflow: hidden;
     display: flex;
     align-items: stretch;
+    background-color: var(--bg-secondary);
 }
 
 li {
     padding: 10px 12px 10px 12px;
     display: flex;
     align-items: flex-end;  
+    transition-duration: 0.3s;
     
 }
 
-li a {
+a {
     color: var(--text-light);
     text-align: center;
     text-decoration: none;
     transition-duration: 0.5s;
 }
 
-.hoverable:hover{
-    text-shadow: 3px 3px 3px black;
+li:hover {
+    background-color: var(--bg-navigation);
+    text-shadow: 0px 3px 5px black;
 }
 
-.title a{
-    font-size: xx-large;
+.title{
+    font-size: xxx-large;
     padding-right: 25px;
     padding-left: 10px;
+    text-shadow: 0px 3px 5px black;
+}
+
+.title-holder{
+    padding-bottom: 5px;
 }
 
 .active { 
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 0px 3px 5px black;
+    background-color: var(--bg-navigation);
 }
 
 

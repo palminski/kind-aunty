@@ -90,3 +90,9 @@ li:last-child {
     margin: 0;
     font-size: large;
 }
+
+@media (max-width: 530px) {
+    h1 {
+        font-size: large;
+    }
+}

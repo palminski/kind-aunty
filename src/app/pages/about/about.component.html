@@ -7,40 +7,53 @@
             <hr>
             <div class="clearfix">
                 <img src="assets/test.jpeg" alt="test">
-                <p class="main-description">I am a dedicate, passionate teacher with over 36 years of experience. Helping children reach their full
-                    potential is incredibly rewarding and is so important! Studies show that early intervention is key to
+                <p class="main-description">I am a dedicate, passionate teacher with over 36 years of experience.
+                    Helping children reach their full
+                    potential is incredibly rewarding and is so important! Studies show that early intervention is key
+                    to
                     school success. I help parents and teachers support children to the best of their ability.</p>
             </div>
         </div>
         <br>
 
-        <!-- PROFESSIONAL EXPERIENCES SECTION -->
+
         <div class="invis-block animate-from-transparent" appScrollAnimation>
             <ul>
-                <h1 class="list-header animate-from-transparent" appScrollAnimation>Professional Experiences</h1>
-                
-                <li *ngFor="let listItem of professionalExperiences" class="animate-from-transparent" appScrollAnimation>
-                    <span class="bold">{{listItem.header}}</span>
-                    <br>
-                    {{listItem.description}}
-                </li>
-                
+                <!-- HEADERS -->
+                <div class="tab-holder">
+                    <h1 [ngClass]="{'active': selectedTab === 'professionalExperiences'}"
+                        class="list-header animate-from-transparent" appScrollAnimation
+                        (click)="changeTab('professionalExperiences')">Professional Experiences</h1>
+                    <h1 [ngClass]="{'active': selectedTab === 'degrees'}" class="list-header animate-from-transparent"
+                        appScrollAnimation (click)="changeTab('degrees')">Degrees</h1>
+                </div>
+                <div class="list-holder">
+                    <!-- PROFESSIONAL EXPERIENCES SECTION -->
+                    <div class="toggle-list" [ngClass]="{'active-list': selectedTab === 'professionalExperiences'}">
+                        <li *ngFor="let listItem of professionalExperiences" class="animate-from-transparent"
+                            appScrollAnimation>
+                            <span class="bold">{{listItem.header}}</span>
+                            <br>
+                            {{listItem.description}}
+                        </li>
+                    </div>
+                    <!-- DEGREES SECTION -->
+                    <div class="toggle-list" [ngClass]="{'active-list': selectedTab === 'degrees'}">
+                        <li *ngFor="let listItem of degrees" class="animate-from-transparent" appScrollAnimation>
+                            <span class="bold">{{listItem.header}}</span>
+                            <div *ngIf="listItem.description">
+                                <hr>
+                                {{listItem.description}}
+                            </div>
+                        </li>
+                    </div>
+                </div>
+
             </ul>
         </div>
         <br>
 
-        <!-- DEGREES SECTION -->
-        <div class="invis-block animate-from-transparent" appScrollAnimation>
-            <ul>
-                <h1 class="list-header animate-from-transparent" appScrollAnimation>Degrees</h1>
-                <li *ngFor="let listItem of degrees" class="animate-from-transparent" appScrollAnimation>
-                    <span class="bold">{{listItem.header}}</span>
-                    <div *ngIf="listItem.description">
-                        <hr>
-                        {{listItem.description}}
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+
     </div>
 </div>

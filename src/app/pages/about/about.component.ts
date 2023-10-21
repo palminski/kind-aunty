@@ -13,6 +13,12 @@ interface ListItem {
 
 export class AboutComponent {
 
+  selectedTab: string = "professionalExperiences"
+
+  changeTab(tab: string): void {
+    this.selectedTab = tab;
+  }
+
   //Experience
   professionalExperiences: ListItem[] = [
     {

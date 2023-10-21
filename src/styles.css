@@ -57,7 +57,7 @@ body {
     background-image: var(--gradient);
     filter: drop-shadow(0px 3px 6px black);
     color: var(--text-light);
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 10px;
     
 }

@@ -30,14 +30,6 @@ export class ForParentsComponent {
       ]
     },
     {
-      title: "Intervention Services",
-      description: `Hiring an experienced and sensitive remediation specialist is critical because the
-      quicker your child can read at grade-level, the more successful your child will be in school and in life! I
-      offer 45-minute sessions to remediate reading and writing deficits.`,
-      pricing: `Costs: Once/week= $65 Twice/week= $120`,
-      timeRequirements: []
-    },
-    {
       title: "Educational Consulting",
       description: `Navigating the world of education and school systems can be tricky, confusing, frustrating, and even
       intimidating at times. I can help give advice and insight from over 36 years of experience as an educator
@@ -49,6 +41,14 @@ export class ForParentsComponent {
         "Debriefing with parents: 1-1.5 hours",
         "Writing a customized report takes 2 hours (optional)",
       ]
+    },
+    {
+      title: "Intervention Services",
+      description: `Hiring an experienced and sensitive remediation specialist is critical because the
+      quicker your child can read at grade-level, the more successful your child will be in school and in life! I
+      offer 45-minute sessions to remediate reading and writing deficits.`,
+      pricing: `Costs: Once/week= $65 Twice/week= $120`,
+      timeRequirements: []
     },
 
   ]

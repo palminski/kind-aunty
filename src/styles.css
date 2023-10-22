@@ -1,18 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-
-
-
 body {
     background-color: rgb(163, 218, 155);
     background-image: var(--page-bg);
     background-size: 250px;
-
     padding: 0;
     margin: 0;
 }
-
+/* Sets up sites basic layout */
 #flexBody {
     min-height: 100vh;
     margin: 0;
@@ -31,6 +24,20 @@ body {
     margin-bottom: 18px;
 }
 
+/* Section header */
+.header {
+    background-color: var(--bg-primary);
+    width: 50%;
+    padding: 25px;
+    border-radius: 5px 90px 5px 50px;
+    filter: drop-shadow(0px 3px 6px black);
+    background-image: var(--wood-bg); 
+    color: var(--text-light);
+    text-shadow: 0px 2px 3px black;
+    margin: 0;   
+}
+
+/* Holds content centered on page */
 .container {
     max-width: 1300px;
     width: 95%;
@@ -44,21 +51,26 @@ body {
     margin: 0% 1%;
 }
 
+/* simple content block */
 .block {
     background-color: var(--bg-primary);
     background-image: var(--gradient);
     filter: drop-shadow(0px 3px 6px black);
     color: var(--text-light);
     border-radius: 5px;
-    padding: 10px;
-
 }
-
 .invis-block {
     color: var(--text-light);
+}
 
-
-
+.block-header {
+    background-color: var(--bg-secondary);
+    filter: drop-shadow(0px 1px 1px black);
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+.block-body {
+    padding: 10px;
 }
 
 /* Utility */

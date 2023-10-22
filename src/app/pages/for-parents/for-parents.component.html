@@ -1,27 +1,32 @@
 <div class="page grow-in">
 
+    <!-- Services Provided Section -->
     <div class="container">
         <h1 class="header">Services for Parents</h1>
     </div>
-
+    <!-- Flex Container for Services -->
     <div class="container">
         <div class="flex-block" *ngFor="let service of services">
             <div class="title-holder">
                 <h1>{{service.title}}</h1>
             </div>
-
-            <div class="description-holder">
-                <p>{{service.description}}</p>
-                    <br>
+            <div class="flex-column">
+                <div class="description-holder">
+                    <p>{{service.description}}</p>
+                </div>
+                
+                <div class="description-holder">
                     <p>{{service.pricing}}</p>
-                        <ul>
-                            <li *ngFor="let timeRequirement of service.timeRequirements">{{timeRequirement}}</li>
-                        </ul>
+                    <ul>
+                        <li *ngFor="let timeRequirement of service.timeRequirements">{{timeRequirement}}</li>
+                    </ul>
+                </div>
             </div>
-            
+
+
+
         </div>
-        
-        
     </div>
-    
+    <!--  -->
+
 </div>

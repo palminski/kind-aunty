@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.flex-block {
+    flex: 1;
+    margin: 0 10px;
+    background-color: var(--bg-primary);
+    filter: drop-shadow(0px 3px 6px black);
+    border-radius: 5px;
+}
+
+h1 {
+    color: var(--text-light);
+    text-shadow: 0px 2px 3px black;
+    margin: 0;
+}
+
+.title-holder {
+    background-color: var(--bg-secondary);
+    filter: drop-shadow(0px 1px 1px black);
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+.description-holder {
+    padding: 10px;
+    color: var(--text-light);
+    flex: 1;
+    
+}
+.description-holder p {
+    margin: 0;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+}

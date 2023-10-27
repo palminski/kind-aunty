@@ -5,16 +5,19 @@
             <div class="block-header">
                 <h1>Contact Me</h1>
             </div>
-            <div class="block-body">
-                <h3>Let’s Start a Conversation!</h3>
-                <p>
-
-                    Your inquiries are important, and we appreciate you taking the time to reach out. Every message is read with care, and we are committed to ensuring that your experience with us is nothing short of excellent. So go ahead, fill out the form, hit send, and let the good vibes roll!
-                    
-                    Looking forward to hearing from you,
-                    
-                    [Your Name or Your Team's Name]</p>
-                <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
+            <div class="block-body flex-holder">
+                <div class="flex-item">
+                    <h3>Let’s Start a Conversation!</h3>
+                    <p>
+    
+                        Your inquiries are important, and we appreciate you taking the time to reach out. Every message is read with care, and we are committed to ensuring that your experience with us is nothing short of excellent. So go ahead, fill out the form, hit send, and let the good vibes roll!
+                        
+                        Looking forward to hearing from you,
+                        
+                        [Your Name or Your Team's Name]</p>
+                </div>
+                
+                <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()" class="flex-item">
                     
                     
                     

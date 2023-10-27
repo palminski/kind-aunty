@@ -1,37 +1,61 @@
 h1 {
     margin: 0;
 }
-h3{
+
+h3 {
     margin: 0;
 }
+
 p {
     margin-top: 0;
 }
+
 input {
-padding: 2px;
-width: 99%;
+    padding: 2px;
+    width: 99%;
 }
+
 textarea {
     padding: 2px;
-    width: 99%; 
+    width: 99%;
     resize: vertical;
 }
+
 button {
-    padding:2px 10px;
+    padding: 2px 10px;
     border-radius: 0 50px 0 50px;
+    border-width: 2px;
+    border-color: rgb(49, 255, 128);
     transition-duration: 0.3s;
-    background-color: aquamarine;
+    background-color: rgb(127, 255, 159);
 }
+
 button:hover {
     background-color: rgb(49, 255, 186);
+    border-color: rgb(49, 255, 186);
+
 }
+
 button:disabled {
     background-color: rgba(107, 107, 107, 0.226);
+    border-color: rgba(0, 0, 0, 0.363);
 }
+
 button:disabled:hover {
     background-color: rgba(107, 107, 107, 0.226);
 }
-.form-holder {
-    width: 500px;
+
+.flex-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 0 10px;
     
+
 }

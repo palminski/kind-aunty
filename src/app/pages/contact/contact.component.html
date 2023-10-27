@@ -1,23 +1,32 @@
 <div class="page grow-in">
-    <div class="container block">
-        <h1>Contact</h1>
-        <hr>
-        <p>Please Press the button below to test function in the contact component. Do note that this is not the
-            finalised version of the page, it is just used to test how input will be handled so we can use it to send
-            emails later!</p>
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-            <input id="input-test-1" placeholder="input test 1" [(ngModel)]="model.test1" name="test1"
-                (ngModelChange)="onFormChanged()">
+    <div class="container">
 
-            <input id="input-test-2" placeholder="input test 2" [(ngModel)]="model.test2" name="test2"
-                (ngModelChange)="onFormChanged()">
-            <button>Submit</button>
+        <div class="block animate-from-transparent" appScrollAnimation>
+            <div class="block-header">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="block-body">
+                <p>Please Press the button below to test function in the contact component. Do note that this is not the
+                    finalised version of the page, it is just used to test how input will be handled so we can use it to send
+                    emails later!</p>
+                <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
+                    <label for="name">Name: </label>
+                    <input id="name" formControlName="name" required />
 
-        </form>
-        <h1 *ngIf="isSubmitted">Form was Submited with values: [{{submittedMessage.test1}}] [{{submittedMessage.test2}}]
-        </h1>
-        <hr>
-        Data from form will display here in json format for tesing
-        <br> {{model | json}}
+                    <label for="email">Email: </label>
+                    <input id="email" formControlName="email" required />
+
+                    <label for="message">Message: </label>
+                    <textarea id="message" formControlName="message"  rows="4" cols="50" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+                
+            </div>
+            
+        </div>
+
+        
+        
     </div>
 </div>

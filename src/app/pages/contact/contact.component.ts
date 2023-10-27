@@ -1,31 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { Message } from './message';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit{
 
-  model = new Message("", "");
-  submittedMessage: Message = new Message("","");
-  isSubmitted: boolean = false;
-  inputTest1: string = "";
-  inputTest2: string = "";
+  ContactForm!: FormGroup;
 
-  //Make sure we reset the submission value when the form is changed so the message will no longer appear
-  onFormChanged() {
-    this.isSubmitted = false;
+  constructor(private fb: FormBuilder) {};
+
+  ngOnInit() {
+    this.ContactForm = this.fb.group({
+      name: ["", Validators.required],
+      email: ["", [Validators.required, Validators.email]],
+      message: ["", Validators.required]
+    })
   }
 
   //record submitted values and reset the ones on the form
-  onSubmit() {
-    this.submittedMessage.test1 = this.model.test1;
-    this.submittedMessage.test2 = this.model.test2;
-    this.model.test1 = "";
-    this.model.test2 = "";
-    this.isSubmitted = true;
+  onSubmit(): void {
+    console.log("submitted")
+    if (this.ContactForm.valid) {
+      console.log(this.ContactForm.value);
+      this.ContactForm.reset();
+    }
+    else {
+      console.log("error");
+      console.log(this.ContactForm.errors);
+    }
+    
   }
 }

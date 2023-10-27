@@ -10,12 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit{
 
   ContactForm!: FormGroup;
+  errorMessage!: string;
 
   constructor(private fb: FormBuilder) {};
 
   ngOnInit() {
     this.ContactForm = this.fb.group({
-      name: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
       message: ["", Validators.required]
     })
@@ -30,7 +30,9 @@ export class ContactComponent implements OnInit{
     }
     else {
       console.log("error");
-      console.log(this.ContactForm.errors);
+      if (this.ContactForm.get('email')?.invalid) this.errorMessage = "Email is invalid.";
+      if (this.ContactForm.get('message')?.invalid) this.errorMessage = "A message must be included.";
+      console.log(this.errorMessage);
     }
     
   }

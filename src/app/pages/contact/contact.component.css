@@ -1,3 +1,37 @@
 h1 {
     margin: 0;
 }
+h3{
+    margin: 0;
+}
+p {
+    margin-top: 0;
+}
+input {
+padding: 2px;
+width: 99%;
+}
+textarea {
+    padding: 2px;
+    width: 99%; 
+    resize: vertical;
+}
+button {
+    padding:2px 10px;
+    border-radius: 0 50px 0 50px;
+    transition-duration: 0.3s;
+    background-color: aquamarine;
+}
+button:hover {
+    background-color: rgb(49, 255, 186);
+}
+button:disabled {
+    background-color: rgba(107, 107, 107, 0.226);
+}
+button:disabled:hover {
+    background-color: rgba(107, 107, 107, 0.226);
+}
+.form-holder {
+    width: 500px;
+    
+}

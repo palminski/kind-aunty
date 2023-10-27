@@ -1,23 +1,42 @@
 <div class="page grow-in">
-    <div class="container block">
-        <h1>Contact</h1>
-        <hr>
-        <p>Please Press the button below to test function in the contact component. Do note that this is not the
-            finalised version of the page, it is just used to test how input will be handled so we can use it to send
-            emails later!</p>
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
-            <input id="input-test-1" placeholder="input test 1" [(ngModel)]="model.test1" name="test1"
-                (ngModelChange)="onFormChanged()">
+    <div class="container">
 
-            <input id="input-test-2" placeholder="input test 2" [(ngModel)]="model.test2" name="test2"
-                (ngModelChange)="onFormChanged()">
-            <button>Submit</button>
+        <div class="block animate-from-transparent form-holder" appScrollAnimation>
+            <div class="block-header">
+                <h1>Contact Me</h1>
+            </div>
+            <div class="block-body flex-holder">
+                <div class="flex-item">
+                    <h3>Let’s Start a Conversation!</h3>
+                    <p>
+    
+                        Your inquiries are important, and we appreciate you taking the time to reach out. Every message is read with care, and we are committed to ensuring that your experience with us is nothing short of excellent. So go ahead, fill out the form, hit send, and let the good vibes roll!
+                        
+                        Looking forward to hearing from you,
+                        
+                        [Your Name or Your Team's Name]</p>
+                </div>
+                
+                <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()" class="flex-item">
+                    
+                    
+                    
+                    <label for="email"><h3>Email: </h3></label>
+                    <input id="email" formControlName="email" type="email" placeholder="example@example.com" required />
+                    <br>
 
-        </form>
-        <h1 *ngIf="isSubmitted">Form was Submited with values: [{{submittedMessage.test1}}] [{{submittedMessage.test2}}]
-        </h1>
-        <hr>
-        Data from form will display here in json format for tesing
-        <br> {{model | json}}
+                    <label for="message"><h3>Message: </h3></label>
+                    
+                    <textarea id="message" formControlName="message" placeholder="Your Message"  rows="4" cols="50" required></textarea>
+                    <br>
+                    <button type="submit" [disabled]="ContactForm.invalid">Submit</button>
+                </form>
+                
+            </div>
+            
+        </div>
+
+        
+        
     </div>
 </div>

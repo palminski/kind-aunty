@@ -26,7 +26,7 @@ li {
     align-items: flex-end;  
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
-    background-color: var(--bg-secondary); 
+    background-color: var(--bg-navigation-secondary); 
 }
 
 li:hover, .active li {
@@ -42,7 +42,7 @@ a {
 }
 
 .filler {
-    background-color: var(--bg-secondary) !important;
+    background-color: var(--bg-navigation-secondary) !important;
     flex-grow: 1;
 
 }

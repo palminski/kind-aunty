@@ -41,15 +41,15 @@
 }
 
 #slide-1 {
-    background-image: url('/assets/test.jpeg');
+    background-image: url('../../../assets/test.jpeg');
     animation-delay: 0s;
 }
 #slide-2 {
-    background-image: url('/assets/test-2.jpeg');
+    background-image: url('../../../assets/test-2.jpeg');
     animation-delay: 3.3s;
 }
 #slide-3 {
-    background-image: url('/assets/test-3.jpeg');
+    background-image: url('../../../assets/test-3.jpeg');
     animation-delay: 6.6s;
 }
 

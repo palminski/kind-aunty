@@ -1,12 +1,17 @@
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
 .hero {
     position: relative;
     width: 100%;
-    height: 81vh;
+    height: 70vh;
     overflow: hidden;
     background-color: white;
+    filter: drop-shadow(0px 3px 6px black);
+    z-index: 3;
 }
-
-
 .hero-image {
     background-image: url('/assets/test.jpeg');
     
@@ -52,6 +57,36 @@
     background-image: url('../../../assets/test-3.jpeg');
     animation-delay: 6.6s;
 }
+
+.home-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    filter: drop-shadow(0px 3px 6px black);
+}
+
+.green-bg {
+    background-color: aquamarine;
+}
+
+.blue-bg{
+    background-color: rgb(127, 197, 255);
+}
+
+.section-container {
+    max-width: 1300px;
+    width: 95%;
+    margin: 0px auto;
+}
+
+#section-1 {
+z-index: 2;
+}
+#section-2 {
+
+}
+
+
 
 @keyframes fade-out {
     0%, 100% {
